@@ -6,6 +6,7 @@ const Image = props => {
     const {data} = props;
     return (
         <img
+            alt={data.url}
             src={data.url}
             className="gif-img"
         />
