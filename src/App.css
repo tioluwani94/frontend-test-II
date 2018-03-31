@@ -1,28 +1,140 @@
-.App {
-  text-align: center;
+.home {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.home__header {
+    position: absolute;
+    top: 0;
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    color: #ffffff;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.home__header > h2 {
+    font-weight: 400;
 }
 
-.App-title {
-  font-size: 1.5em;
+.home__hero {
+    width: 100%;
+    height: 50vh;
+    padding: 5rem 1rem 4rem;
+    background: #5099DE;
 }
 
-.App-intro {
-  font-size: large;
+.home__hero-content {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.home__hero-content .into-text {
+    text-align: center;
+    color: #ffffff;
+}
+
+.into-text > h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+
+.into-text > p {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.solution > a {
+    display: block;
+    text-decoration: none;
+    color: #5B5B5B;
+}
+
+.solution .solution__container {
+    display: flex;
+    padding: 1rem;
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto 0;
+    border-radius: 4px;
+}
+
+.solution .solution__image {
+    display: flex;
+    align-items: center;
+}
+
+.solution .solution__image > img {
+    width: 100%;
+}
+
+.solution .solution__name {
+    padding-left: 0.5rem;
+    flex: 1;
+}
+
+.solution__name > h6 {
+    padding-bottom: 0.25rem;
+    font-size: 0.75rem;
+}
+
+.solution__name > p {
+    font-size: 1rem;
+}
+
+.solution__spotify .solution__image {
+    width: 20%;
+}
+
+.solution__giphy .solution__image {
+    width: 20%;
+}
+
+@media screen and (max-width: 500px) {
+    .home__hero {
+        min-height: 100vh;
+    }
+
+    .home__header {
+        justify-content: center;
+    }
+
+    .home__hero-content {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .home__hero-content {
+        margin-top: 120px;
+    }
+
+    .app-solutions {
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .solution {
+        flex: 1;
+        margin: 1rem;
+    }
+
+    .solution .solution__container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .solution .solution__image {
+        display: none;
+
+    }
+
+    .solution__name > h6 {
+        font-size: 2rem;
+    }
 }
