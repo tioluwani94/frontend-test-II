@@ -41,7 +41,7 @@ class Giphy extends Component {
     render() {
         return (
             <div className="giphy">
-                <div className="giphy__header">
+                <div className="app-header">
                     <button onClick={this.goToHome}><i className="material-icons">keyboard_arrow_left</i> Back to home
                     </button>
                     <h2>giphy chat</h2>
