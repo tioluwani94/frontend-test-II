@@ -97,13 +97,17 @@
 .giphy {
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .giphy__header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
     padding: 1rem;
     box-shadow: 0 1px 4px #e8e8e8;
     text-align: center;
+    background: #ffffff;
 }
 
 .giphy__header > button {
@@ -115,6 +119,7 @@
     color: #5099DE;
     border: none;
     font-size: 1rem;
+    background: transparent;
 }
 
 .giphy__header > h2 {
@@ -126,12 +131,13 @@
     position: relative;
     height: 100%;
     width: 60%;
+    padding-top: 70px;
     margin: 0 auto;
     background: #f8f8f8;
 }
 
 .chat-section__input {
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     padding: 1rem;
@@ -150,6 +156,13 @@
     border: 1px solid rgba(0,0,0,.15);
 }
 
+.chat-section__conversations {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+
 @media screen and (max-width: 500px) {
     .home__hero {
         min-height: 100vh;
@@ -160,6 +173,10 @@
     }
 
     .home__hero-content {
+        width: 100%;
+    }
+
+    .giphy__chat-section {
         width: 100%;
     }
 }
