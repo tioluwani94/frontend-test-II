@@ -1,12 +1,15 @@
 let express = require('express')
 let request = require('request')
 let querystring = require('querystring')
+require('dotenv').load()
 
 let app = express()
 
 let redirect_uri = 
   process.env.REDIRECT_URI || 
   'http://localhost:8888/callback'
+
+console.log(process.env.SPOTIFY_CLIENT_ID)
 
 app.get('/login', function(req, res) {
   res.redirect('https://accounts.spotify.com/authorize?' +
