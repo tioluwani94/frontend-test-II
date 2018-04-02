@@ -34,7 +34,8 @@ class Giphy extends Component {
                         message: "",
                         images: [myJson.data.images.downsized, ...this.state.images],
                     });
-                });
+                })
+                .catch(error => alert(`An Error Occurred '\n' ${error}`));
         }
     }
 

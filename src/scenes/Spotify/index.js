@@ -85,7 +85,7 @@ class Spotify extends Component {
                             });
                     }
                 })
-                .catch(error => console.log(error));
+                .catch(error => alert(`An Error Occurred '\n' ${error}`));
         }
     }
 
